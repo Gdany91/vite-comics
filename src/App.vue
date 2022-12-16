@@ -1,7 +1,9 @@
 <script >
-import CardContainer from './components/CardContainer.vue';
+import CardContainer from './components/CardContainer.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
+import FooterTop from './components/FooterTop.vue'
+import FooterBottom from './components/FooterBottom.vue'
 
 
 export default {
@@ -10,7 +12,9 @@ export default {
   components : {
       AppHeader,
       CardContainer,
-      AppMain
+      AppMain,
+      FooterTop,
+      FooterBottom
   }
 }
 
@@ -21,6 +25,9 @@ export default {
       <AppHeader />
       <CardContainer />
       <AppMain />
+      <FooterTop />
+      <FooterBottom/>
+
   </div>
 </template>
  
