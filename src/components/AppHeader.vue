@@ -1,34 +1,92 @@
 <script>
     export default {
         name: 'AppHeader',
+        data() {
+            return {
+                
+                link: [
+                    {
+                    name: "CHARACTERS",
+                    
+                    },
+                    {
+                    name: "COMICS",
+                    
+                    },
+                    {
+                    name: "MOVIES",
+                    
+                    },
+                    {
+                    name: "TV",
+                    
+                    },
+                    {
+                    name: "GAMES",
+                    
+                    },
+                    {
+                    name: "COLLECTIBLES",
+                    
+                    },
+                    {
+                    name: "VIDEOS",
+                    
+                    },
+                    {
+                    name: "FANS",
+                    
+                    },
+                    {
+                    name: "NEWS",
+                    
+                    },
+                    {
+                    name: "SHOP",
+                    
+                    },
+                ]
+            }
+        },
+
     }
 </script>
 
 <template>
-    <header>
+     <header>
         <div class="container">
-            
-            <a href="" class = logo>
-                <img src="./src/assets/dc-logo.png" alt="">
-            </a>
-
-            
-
-            <div class="menu">
-
+            <div>
+                <img src="./assets/dc-logo.png" class="img-header">
             </div>
 
+            <ul class="list">
+                <li v-for="(item, index) in link"  >
+                    {{item.name}}
+                </li>
+            </ul>
+
         </div>
-    </header>
+
+  </header>
 </template>
 
 <style lang="scss" scoped>
 
  .container{
-    background-color: rebeccapurple;
+    background-color: rebeccapurple; /* DEBUG */
     min-height: 80px;
     display: flex;
-   
+    justify-content: space-evenly;
+    align-items: center;
+
  }
+
+ ul {
+    display: flex;
+    
+    gap: 15px;
+    list-style-type: none;
+ }
+
 
 </style>
