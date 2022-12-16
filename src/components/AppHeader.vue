@@ -72,20 +72,35 @@
 
 <style lang="scss" scoped>
 
- .container{
-    background-color: rebeccapurple; /* DEBUG */
+
+
+.container{
+    padding: 0 15em;
     min-height: 80px; /* DEBUG */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
  }
 
- ul {
+ul {
     display: flex;
-    
+   
     gap: 15px;
     list-style-type: none;
+}
+
+li{
+     
+     cursor: pointer;
+
+     &:hover{
+        border-bottom: 3px solid #0282f9;
+     }
+}
+
+ .img-header{
+    width: 3rem;
  }
 
 
