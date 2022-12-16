@@ -53,10 +53,10 @@
 </script>
 
 <template>
-     <header>
+    <header>
         <div class="container">
             <div>
-                <img src="./assets/dc-logo.png" class="img-header">
+                <img src="../../public/dc-logo.png" class="img-header">
             </div>
 
             <ul class="list">
@@ -67,14 +67,14 @@
 
         </div>
 
-  </header>
+    </header>
 </template>
 
 <style lang="scss" scoped>
 
  .container{
     background-color: rebeccapurple; /* DEBUG */
-    min-height: 80px;
+    min-height: 80px; /* DEBUG */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
