@@ -189,17 +189,18 @@
     
 
 
-
 </template>
 
 <style lang="scss" scoped>
+
+@use '../styles/partials/variables.scss' as *;
 
     .container{
         background-image:  url("/public/footer-bg.jpg");
         height: 400px; 
         display: flex;
         justify-content: space-between;
-        padding: 0 15rem;
+        padding: $padding-container;
         overflow: hidden;
     }
 

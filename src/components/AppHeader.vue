@@ -72,22 +72,24 @@
 
 <style lang="scss" scoped>
 
+@use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
 
 
 .container{
-    padding: 0 15em;
+    padding: $padding-container;
     min-height: 80px; /* DEBUG */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center;
+
 
  }
 
 ul {
     display: flex;
-   
+    
     gap: 15px;
     list-style-type: none;
+    align-items: center;
 }
 
 li{
@@ -95,7 +97,8 @@ li{
      cursor: pointer;
 
      &:hover{
-        border-bottom: 3px solid #0282f9;
+        color: $primary;
+        border-bottom: 3px solid $primary;
      }
 }
 

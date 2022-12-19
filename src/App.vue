@@ -1,5 +1,5 @@
 <script >
-import CardContainer from './components/CardContainer.vue'
+
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import FooterTop from './components/FooterTop.vue'
@@ -11,7 +11,6 @@ export default {
    
   components : {
       AppHeader,
-      CardContainer,
       AppMain,
       FooterTop,
       FooterBottom
@@ -21,14 +20,19 @@ export default {
 </script> 
 
 <template>
-  <div>
-      <AppHeader />
-      <CardContainer />
-      <AppMain />
-      <FooterTop />
-      <FooterBottom/>
+  <header>
+    <AppHeader />
+  </header>
 
-  </div>
+  <main>
+    <AppMain />
+  </main>
+      
+  <footer>
+    <FooterTop />
+    <FooterBottom />
+  </footer>   
+      
 </template>
  
 <style lang="scss"  >
@@ -37,7 +41,5 @@ export default {
   @use './styles/partials/variables.scss' as *;
 
  
-    h1{
-      color: $primary;
-    }
+   
 </style>

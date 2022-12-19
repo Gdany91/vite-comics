@@ -47,13 +47,15 @@
 
 <style lang="scss" scoped>
 
+@use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
+
+
     .container{
         background-color: #303030;
         min-height: 100px; /* DEBUG */
-        padding: 0 15rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: $padding-container;
+        @include flex-between-center;
     }
 
     .signUp{
@@ -61,7 +63,7 @@
         color: white;
         font-weight: bold;
         font-size: 18px;
-        border: 2px solid #0282f9;
+        border: 2px solid $primary;
         padding: 15px;
         vertical-align: middle;
         height: 20px;
@@ -72,14 +74,13 @@
     }
 
     .social{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-between-center;
+
         gap: 1rem;
 
         span{
             font-weight: bold;
-            color: #0282f9;
+            color: $primary;
         }
 
     }
