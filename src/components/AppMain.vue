@@ -114,7 +114,11 @@ import CardContainer from './CardContainer.vue'
 
 <template>
     <div class="container">
-        <CardContainer/>
+        <div class="cardContainer">
+            <CardContainer :cards="cardList"/>
+
+        </div>
+        
         <ul>
             <li v-for="(item, index) in items" >
                 <img :src="item.img" class="image">

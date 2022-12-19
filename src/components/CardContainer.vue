@@ -18,7 +18,7 @@
 <template>
     
     <div class="container">
-     <!--    <ul>
+        <ul>
 
             <li v-for="(card, index) in cards" :key="index">
                 <a href="">
@@ -27,7 +27,7 @@
                 </a>
             </li>
 
-        </ul> -->
+        </ul>
         
 
     </div>
