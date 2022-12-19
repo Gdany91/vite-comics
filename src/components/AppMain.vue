@@ -3,6 +3,11 @@ import CardContainer from './CardContainer.vue'
 
     export default {
         name: 'AppMain',
+
+        components: {
+            CardContainer
+        },
+
         data() {
             return {
                 items: [
@@ -116,17 +121,21 @@ import CardContainer from './CardContainer.vue'
     <div class="container">
         <div class="cardContainer">
             <CardContainer :cards="cardList"/>
-
         </div>
         
-        <ul>
-            <li v-for="(item, index) in items" >
-                <img :src="item.img" class="image">
-                <a >
-                    {{ item.name }}
-                </a>
-            </li>
-        </ul>
+
+        
+        <div class="menuContainer">
+            <ul>
+                <li v-for="(item, index) in items" >
+                    <img :src="item.img" class="image">
+                    <a class="text" >
+                        {{ item.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
         
 
     </div>
@@ -141,17 +150,32 @@ import CardContainer from './CardContainer.vue'
     .container{
         background-color: $primary;
         min-height: 100px; /* DEBUG */
-        padding: $padding-container;
         
 
-    }
+        .cardContainer{
+            padding: $padding-container;
+            background-color: black;
+        }
 
+        .menuContainer{
+            
+            padding: $padding-container;
+        
+        }
+        
+       
+
+    }
+    
+   
     ul{
         @include flex-between-center;
-
+        
         list-style-type: none;
         padding: 1rem 0;
-       
+         
+        
+
         
     }
 
@@ -159,7 +183,9 @@ import CardContainer from './CardContainer.vue'
         @include flex-between-center;
 
         color: white;
+        
 
+      
     }
 
  

@@ -17,7 +17,7 @@
 
 <template>
     
-    <div class="container">
+    
         <ul>
 
             <li v-for="(card, index) in cards" :key="index">
@@ -28,9 +28,7 @@
             </li>
 
         </ul>
-        
-
-    </div>
+   
 
 </template>
 
@@ -39,11 +37,30 @@
 @use '../styles/partials/variables.scss' as *;
 
 
-    .container{
-        background-color: black;
-        min-height: 80px; /* DEBUG */
-        padding: $padding-container;
-    }
+   
+
+        ul{
+            flex-wrap: wrap;
+
+            li{
+                width: calc(100% / 6);
+                position: relative;
+                margin-bottom: 0.5rem;
+
+                .text{
+                    color: white;
+                    text-decoration: none;
+                    position: absolute;
+                    bottom: 0.5rem;
+                }
+            }
+        }
+    
+
+    
+
+     
+    
 
 
 </style>
